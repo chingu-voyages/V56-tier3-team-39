@@ -39,3 +39,22 @@ coding!
 
    ...
 - Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
+
+
+## Setup
+
+## backend setup
+
+cd server
+python -m venv venv
+# Activate virtual environment:
+# Windows:
+venv\Scripts\activate
+# macOS/Linux:
+source venv/bin/activate
+
+make sure you have this interpreter selected (i.e. D:\GitHub\V56-tier3-team-39\server\env_socket\Scripts\python.exe
+)
+
+
+pip install flask python-socketio
