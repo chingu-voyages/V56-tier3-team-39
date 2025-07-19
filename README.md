@@ -52,6 +52,8 @@ Bash
 windows 
    -install https://www.python.org/downloads/release/python-3123/
 
+no later version is stable for flask at this time
+
 cd server
 python -m venv venv
 # Activate virtual environment:
@@ -64,7 +66,16 @@ make sure you have this interpreter selected (i.e. D:\GitHub\V56-tier3-team-39\s
 )
 
 
-pip install flask python-socketio
+pip install -r requirements.txt
+python -m pip install --upgrade pip
+
+
+✅ gunicorn — your production WSGI server
+
+✅ gevent — async worker class (no need for eventlet)
+
+✅ greenlet — already satisfied
+
 
 ## client setup
 
