@@ -1,82 +1,151 @@
-# voyage-tasks
+# Voyage Tasks
 
-Your project's `readme` is as important to success as your code. For 
-this reason you should put as much care into its creation and maintenance
-as you would any other component of the application.
+Welcome to the Voyage Team 39 project! This document will help you get started, set up the project, and understand our team structure.
 
-If you are unsure of what should go into the `readme` let this article,
-written by an experienced Chingu, be your starting point - 
-[Keys to a well written README](https://tinyurl.com/yk3wubft).
+---
 
-And before we go there's "one more thing"! Once you decide what to include
-in your `readme` feel free to replace the text we've provided here.
+## 📄 Team Documents
 
-> Own it & Make it your Own!
-
-## Team Documents
-
-You may find these helpful as you work together to organize your project.
+Helpful resources for organizing and collaborating:
 
 - [Team Project Ideas](./docs/team_project_ideas.md)
 - [Team Decision Log](./docs/team_decision_log.md)
 
-Meeting Agenda templates (located in the `/docs` directory in this repo):
+**Meeting Agenda Templates** (in `/docs`):
 
-- Meeting - Voyage Kickoff --> ./docs/meeting-voyage_kickoff.docx
-- Meeting - App Vision & Feature Planning --> ./docs/meeting-vision_and_feature_planning.docx
-- Meeting - Sprint Retrospective, Review, and Planning --> ./docs/meeting-sprint_retrospective_review_and_planning.docx
-- Meeting - Sprint Open Topic Session --> ./docs/meeting-sprint_open_topic_session.docx
+- [Voyage Kickoff](./docs/meeting-voyage_kickoff.docx)
+- [App Vision & Feature Planning](./docs/meeting-vision_and_feature_planning.docx)
+- [Sprint Retrospective, Review, and Planning](./docs/meeting-sprint_retrospective_review_and_planning.docx)
+- [Sprint Open Topic Session](./docs/meeting-sprint_open_topic_session.docx)
 
-## Our Team
+---
 
-## Our Team
+## 👥 Our Team
 
-Meet our awesome team! Everyone has added their GitHub and LinkedIn profiles for easy access.
+Meet our awesome team! Connect with us on GitHub and LinkedIn:
 
 - **Ryan Anderson**: [GitHub]() / [LinkedIn]()
 - **Kris**: [GitHub]() / [LinkedIn]()
 - **Aja**: [GitHub]() / [LinkedIn]()
 - **Eoin McDonnell**: [GitHub](https://github.com/oldmcdonnell) / [LinkedIn](https://www.linkedin.com/in/mcdonnell-eoin/)
 
+---
 
-## Setup
+## 🚀 Project Setup
 
-## server setup
+### Server Setup
 
-Python version Python 3.12.3 is stable do not use the latest version of python. 
+**Python Version:**  
+Use Python **3.12.3** (do not use newer versions; Flask compatibility issues).
 
-Bash
-   -pyenv install 3.12.3
-   -pyenv global 3.12.3
+#### Install Python
 
-windows 
-   -install https://www.python.org/downloads/release/python-3123/
+**Linux:**
+```bash
+sudo apt update
+sudo apt install python3 python3-pip python3-venv -y
+```
 
-no later version is stable for flask at this time
+**Windows:**  
+Download and install from [python.org](https://www.python.org/downloads/release/python-3123/)
 
+**With pyenv (Linux/macOS):**
+```bash
+pyenv install 3.12.3
+pyenv global 3.12.3
+```
+
+#### Create and Activate Virtual Environment
+
+```bash
 cd server
-python -m venv venv
-# Activate virtual environment:
-# Windows:
-venv\Scripts\activate
-# macOS/Linux:
-source venv/bin/activate
+python3 -m venv env_socket
+source env_socket/bin/activate
+```
+*On Windows:*
+```
+env_socket\Scripts\activate
+```
 
-make sure you have this interpreter selected (i.e. D:\GitHub\V56-tier3-team-39\server\env_socket\Scripts\python.exe
-)
+#### Install Dependencies
 
-
+```bash
 pip install -r requirements.txt
 python -m pip install --upgrade pip
+```
 
+#### Run the Server
 
-✅ gunicorn — your production WSGI server
+```bash
+gunicorn -k geventwebsocket.gunicorn.workers.GeventWebSocketWorker -w 1 app_socket.app_socket_server:app --bind 0.0.0.0:5000
+```
 
-✅ gevent — async worker class (no need for eventlet)
+#### Test the Server
 
-✅ greenlet — already satisfied
+```bash
+curl http://localhost:5000/members
+```
+Expected response:
+```json
+{"members":["Member1","Member2","Member3"]}
+```
 
+---
 
-## client setup
+### Client Setup
 
-npm 
+```bash
+npm install
+```
+*(Add more client setup instructions here as needed)*
+
+---
+
+## 📝 Additional Notes
+
+- Use [Keys to a well written README](https://tinyurl.com/yk3wubft) as a reference for improving this file.
+- Replace placeholder links and add more project-specific details as the project evolves.
+
+---
+
+## 🔗 References
+
+- [Socket.IO Python Docs](https://python-socketio.readthedocs.io/en/stable/intro.html#what-is-socket-io)
+- [Gevent Documentation](https://www.gevent.org/api/index.html)
+- [Gunicorn Documentation](https://docs.gunicorn.org/en/stable/)
+- [YouTube: Flask, Socket.IO, Gunicorn, Gevent Setup](https://www.youtube.com/watch?v=7LNl2JlZKHA)
+
+---
+
+## 🖥️ Virtual Machine & Parrot OS Setup (Optional)
+
+### Install VMware
+
+- [VMware Download Link](https://drive.google.com/file/d/1VQZilVojcY1aohbFgCQYXrXsCF1c1cZr/view?usp=sharing)
+
+### Install Parrot OS on Windows (via VMware)
+
+1. **Download Parrot OS ISO**  
+   [Parrot Security Edition ISO](https://www.parrotsec.org/download/)
+
+2. **Create a New Virtual Machine in VMware Workstation**
+   - Open VMware Workstation.
+   - Click "Create a New Virtual Machine".
+   - Choose Typical (recommended) > Next.
+   - Select "Installer disc image file (iso)" and browse to your downloaded Parrot ISO.
+   - Choose Linux as the guest OS and select Debian 64-bit.
+   - Name your VM and set the location.
+   - Allocate at least:
+     - 2 cores (if available)
+     - 4096 MB RAM (or more)
+     - 20 GB Disk (split or single file)
+
+3. **Install the OS**
+   - Power on the VM.
+   - Select Install or Graphical Install.
+   - Follow the on-screen instructions.
+   - Set root password/user account, locale, keyboard layout, and disk partitioning.
+
+4. **VM Tools & Networking**
+   - (Optional) Install VMware Tools from the VM menu.
+   - Ensure networking is set to NAT or Bridged as
