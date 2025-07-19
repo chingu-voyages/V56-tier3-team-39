@@ -41,7 +41,16 @@ Meet our awesome team! Everyone has added their GitHub and LinkedIn profiles for
 
 ## Setup
 
-## backend setup
+## server setup
+
+Python version Python 3.12.3 is stable do not use the latest version of python. 
+
+Bash
+   -pyenv install 3.12.3
+   -pyenv global 3.12.3
+
+windows 
+   -install https://www.python.org/downloads/release/python-3123/
 
 cd server
 python -m venv venv
@@ -56,3 +65,7 @@ make sure you have this interpreter selected (i.e. D:\GitHub\V56-tier3-team-39\s
 
 
 pip install flask python-socketio
+
+## client setup
+
+npm 
