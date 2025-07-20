@@ -149,3 +149,5 @@ npm install
 4. **VM Tools & Networking**
    - (Optional) Install VMware Tools from the VM menu.
    - Ensure networking is set to NAT or Bridged as
+
+Tell me if you need help
