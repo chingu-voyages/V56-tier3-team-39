@@ -24,7 +24,7 @@ Helpful resources for organizing and collaborating:
 
 Meet our awesome team! Connect with us on GitHub and LinkedIn:
 
-- **Ryan Anderson**: [GitHub]() / [LinkedIn]()
+- **Ryan Anderson**: [GitHub](https://github.com/RyanAndersonG64) / [LinkedIn](https://www.linkedin.com/in/ryan-anderson-g64/)
 - **Kris**: [GitHub]() / [LinkedIn]()
 - **Aja**: [GitHub]() / [LinkedIn]()
 - **Eoin McDonnell**: [GitHub](https://github.com/oldmcdonnell) / [LinkedIn](https://www.linkedin.com/in/mcdonnell-eoin/)
