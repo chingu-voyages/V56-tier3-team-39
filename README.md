@@ -24,9 +24,8 @@ Helpful resources for organizing and collaborating:
 
 Meet our awesome team! Connect with us on GitHub and LinkedIn:
 
-- **Ryan Anderson**: [GitHub](https://github.com/RyanAndersonG64) / [LinkedIn](https://www.linkedin.com/in/ryan-anderson-g64/)
+- **Ryan Anderson**: [GitHub]() / [LinkedIn]()
 - **Kris**: [GitHub]() / [LinkedIn]()
-- **Aja**: [GitHub]() / [LinkedIn]()
 - **Eoin McDonnell**: [GitHub](https://github.com/oldmcdonnell) / [LinkedIn](https://www.linkedin.com/in/mcdonnell-eoin/)
 
 ---
@@ -34,6 +33,15 @@ Meet our awesome team! Connect with us on GitHub and LinkedIn:
 ## 🚀 Project Setup
 
 ### Server Setup
+
+**Virtual machine**
+enable SVM Mode (Secure Virtual Machine) on windows
+you will want to download an ISO potentalliy i use https://parrotsec.org/download/ -> Live - > security - AMD 64-> this will give you an ISO file, 
+open the file in the VMWareare by create new VM and select the ISO, make sure to give yourself about 8GB or ram if posible and a few cores. 
+after you try install debian and from there install the .de b file for vscode from the web
+It will promot you to update 
+
+
 
 **Python Version:**  
 Use Python **3.12.3** (do not use newer versions; Flask compatibility issues).
@@ -46,8 +54,6 @@ sudo apt update
 sudo apt install python3 python3-pip python3-venv -y
 ```
 
-**Windows:**  
-Download and install from [python.org](https://www.python.org/downloads/release/python-3123/)
 
 **With pyenv (Linux/macOS):**
 ```bash
@@ -91,6 +97,8 @@ Expected response:
 ```
 
 ---
+
+
 
 ### Client Setup
 
