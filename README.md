@@ -98,7 +98,20 @@ Expected response:
 
 ---
 
+#### enable firewall
+```bash
 
+sudo ufw allow 5000/tcp
+sudo ufw enable
+
+
+```
+
+### check connection from frontend, ip address is an exampl,e
+
+```bash
+curl http://192.168.149.128:5000
+```
 
 ### Client Setup
 
