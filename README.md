@@ -37,10 +37,11 @@ Meet our awesome team! Connect with us on GitHub and LinkedIn:
 **Virtual machine**
 enable SVM Mode (Secure Virtual Machine) on windows
 you will want to download an ISO potentalliy i use https://parrotsec.org/download/ -> Live - > security - AMD 64-> this will give you an ISO file, 
+run the VM with a bridged network mode, 8 gb of ram and at least 4 core. 
 open the file in the VMWareare by create new VM and select the ISO, make sure to give yourself about 8GB or ram if posible and a few cores. 
-after you try install debian and from there install the .de b file for vscode from the web
+after you try install debian and from there install the .de  file for vscode from the web
 It will promot you to update 
-
+ 
 
 
 **Python Version:**  
@@ -106,6 +107,7 @@ sudo ufw enable
 
 
 ```
+
 
 ### check connection from frontend, ip address is an exampl,e
 
