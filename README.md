@@ -74,7 +74,7 @@ source env_socket/bin/activate
 env_socket\Scripts\activate
 ```
 
-#### Install Dependencies
+#### Install Dependencies test
 
 ```bash
 pip install -r requirements.txt
