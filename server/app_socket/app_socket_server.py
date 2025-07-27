@@ -9,6 +9,12 @@ sio = socketio.Server(cors_allowed_origins="*", async_mode='gevent')
 app = Flask(__name__)
 app.wsgi_app = socketio.WSGIApp(sio, app.wsgi_app)
 
+
+
+@app.route('/')
+def index():
+    return "WebSocket Server is running!"   
+    
 @sio.event
 def connect(sid, environ):
     print(f'Client connected: {sid}')
