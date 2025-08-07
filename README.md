@@ -58,6 +58,10 @@ sudo apt install python3 python3-pip python3-venv -y
 
 **With pyenv (Linux/macOS):**
 ```bash
+export PATH="~/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 pyenv install 3.12.3
 pyenv global 3.12.3
 ```
