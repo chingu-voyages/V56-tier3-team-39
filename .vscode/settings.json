@@ -1,5 +1,5 @@
 {
   "python-envs.defaultEnvManager": "ms-python.python:pyenv",
-  "python-envs.pythonProjects": [],
+  "python-envs.pythonProjects": []
   "python.pythonpath": "/home/ryananderson66/.pyenv/versions/3.10.12/bin/python",
 }
