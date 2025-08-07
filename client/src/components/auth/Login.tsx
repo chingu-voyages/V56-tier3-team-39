@@ -63,6 +63,8 @@ export default function Login() {
         >
           Login
         </button>
+        <br></br><br></br>
+        <a href = './register'>Don't have account? Register here!</a>
       </form>
     </div>
   );

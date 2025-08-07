@@ -34,6 +34,8 @@ Meet our awesome team! Connect with us on GitHub and LinkedIn:
 
 ### Server Setup
 
+### First-time Setup
+
 **Virtual machine**
 enable SVM Mode (Secure Virtual Machine) on windows
 you will want to download an ISO potentalliy i use https://parrotsec.org/download/ -> Live - > security - AMD 64-> this will give you an ISO file, 
@@ -119,6 +121,17 @@ sudo ufw enable
 ```bash
 curl http://192.168.149.128:5000
 ```
+
+### Running the Server After Setup
+
+export PATH="~/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+cd server
+source env_socket/bin/activate
+
+gunicorn -k geventwebsocket.gunicorn.workers.GeventWebSocketWorker -w 1 app_socket.app_socket_server:app --bind 0.0.0.0:5000
 
 ### Client Setup
 
