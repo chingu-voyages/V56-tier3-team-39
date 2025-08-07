@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
     proxy: {
-      '/api': 'http://192.168.177.130:5000',
+      '/api': 'http://192.168.177.130:5000', // Needed for a VM, change to your VM's IP
     },
   },
 })

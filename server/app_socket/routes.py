@@ -44,8 +44,8 @@ def login():
     else:
         return jsonify({'error': 'Invalid username or password'}), 401
         
-@api.route('/logout', methods=['POST'])
-def logout():
+# @api.route('/logout', methods=['POST'])
+# def logout():
 
 # @api.route('/users/<int:user_id>', methods=['PUT'])
 
