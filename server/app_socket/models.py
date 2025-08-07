@@ -25,5 +25,12 @@ class User(db.Model):
     password = db.Column(db.String(128), nullable=False)
     # Add more fields as needed
 
+    def serialize(self):
+        return {
+            "id": self.id,
+            "username": self.username,
+            "email": self.email,
+        }
+
     def __repr__(self):
         return f'<User {self.username}>'
