@@ -124,6 +124,7 @@ curl http://192.168.149.128:5000
 
 ### Running the Server After Setup
 
+```bash
 export PATH="~/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
@@ -132,7 +133,7 @@ cd server
 source env_socket/bin/activate
 
 gunicorn -k geventwebsocket.gunicorn.workers.GeventWebSocketWorker -w 1 app_socket.app_socket_server:app --bind 0.0.0.0:5000
-
+```
 ### Client Setup
 
 ```bash
