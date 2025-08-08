@@ -14,6 +14,9 @@ def create_app():
     CORS(app)
 
     db.init_app(app)
+    # Ensure tables are created in dev environments
+    with app.app_context():
+        db.create_all()
     app.register_blueprint(api, url_prefix="/api")
     socketio.init_app(app)
 
