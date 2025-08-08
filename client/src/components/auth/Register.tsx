@@ -1,7 +1,10 @@
-import {createUser} from '../../utils/api'
+import { createUser } from '../../utils/api'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function Register() {
+
+  const navigate = useNavigate()
 
   const [username, setUsername] = useState('')
   const [email, setEmail] = useState('')
@@ -59,6 +62,7 @@ export default function Register() {
               createUser(username, email, password)
                 .then(() => {
                   alert("Registration successful!")
+                  navigate('/auth/login')
                 })
                 .catch((err) => {
                   alert("Registration failed: " + err.message)

@@ -14,8 +14,8 @@ createRoot(document.getElementById('root')!).render(
       <Router>
         <Routes>
           <Route path="/" element={<App />} />
-          <Route path="/auth/Login" element={<Login />} />
-          <Route path="/auth/Register" element={<Register />} />
+          <Route path="/auth/login" element={<Login />} />
+          <Route path="/auth/register" element={<Register />} />
         </Routes>
       </Router>
     </AuthProvider>
