@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react"
 import { AuthContext } from "../../context/AuthContext"
-import { Login } from '../../utils/api'
+import { login } from '../../utils/api'
 
 export default function Login() {
   const { setToken } = useContext(AuthContext)

@@ -49,11 +49,11 @@ export async function createUser(username: string, email: string, password: stri
   return response.json()
 }
 
-export async function login(username: string, password: string) {
+export async function login(email: string, password: string) {
   const response = await fetch(`${API_BASE}/login`, {
     method: 'POST',
     headers: getHeaders(),
-    body: JSON.stringify({ username, password }),
+    body: JSON.stringify({ email, password }),
   })
   if (!response.ok) throw new Error('Login failed')
   return response.json()
