@@ -1,33 +1,34 @@
-import React, { useState, useContext } from "react";
-import { AuthContext } from "../../context/AuthContext";
+import React, { useState, useContext } from "react"
+import { AuthContext } from "../../context/AuthContext"
+import { Login } from '../../utils/api'
 
 export default function Login() {
-  const { setToken } = useContext(AuthContext);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const { setToken } = useContext(AuthContext)
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
 
   const handleLogin = async (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault()
 
     try {
       const response = await fetch("http://localhost:5000/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
-      });
+      })
 
       if (response.ok) {
-        const data = await response.json();
-        setToken(data.token); // stores JWT in context + localStorage
+        const data = await response.json()
+        setToken(data.token) // stores JWT in context + localStorage
         // Optionally redirect using react-router
       } else {
-        alert("Invalid login.");
+        alert("Invalid login.")
       }
     } catch (error) {
-      console.error("Login error:", error);
-      alert("Something went wrong.");
+      console.error("Login error:", error)
+      alert("Something went wrong.")
     }
-  };
+  }
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
@@ -67,5 +68,5 @@ export default function Login() {
         <a href = './register'>Don't have account? Register here!</a>
       </form>
     </div>
-  );
+  )
 }
