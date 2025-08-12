@@ -1,0 +1,6 @@
+# Env files
+.env
+.env.*
+# Local virtualenvs
+server/.venv/
+server/env*/
