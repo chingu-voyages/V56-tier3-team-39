@@ -130,6 +130,7 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 cd server
+python3 -m venv env_socket
 source env_socket/bin/activate
 
 gunicorn -k geventwebsocket.gunicorn.workers.GeventWebSocketWorker -w 1 app_socket.app_socket_server:app --bind 0.0.0.0:5000
