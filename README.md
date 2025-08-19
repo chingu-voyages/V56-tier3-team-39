@@ -25,7 +25,7 @@ Helpful resources for organizing and collaborating:
 Meet our awesome team! Connect with us on GitHub and LinkedIn:
 
 - **Ryan Anderson**: [GitHub]() / [LinkedIn]()
-- **Kris**: [GitHub]() / [LinkedIn]()
+- **Kristi Hwang**: [GitHub](https://github.com/kristi-h) / [LinkedIn](https://www.linkedin.com/in/kristi-h-4542b38a/)
 - **Eoin McDonnell**: [GitHub](https://github.com/oldmcdonnell) / [LinkedIn](https://www.linkedin.com/in/mcdonnell-eoin/)
 
 ---
@@ -36,13 +36,11 @@ Meet our awesome team! Connect with us on GitHub and LinkedIn:
 
 **Virtual machine**
 enable SVM Mode (Secure Virtual Machine) on windows
-you will want to download an ISO potentalliy i use https://parrotsec.org/download/ -> Live - > security - AMD 64-> this will give you an ISO file, 
-run the VM with a bridged network mode, 8 gb of ram and at least 4 core. 
-open the file in the VMWareare by create new VM and select the ISO, make sure to give yourself about 8GB or ram if posible and a few cores. 
-after you try install debian and from there install the .de  file for vscode from the web
-It will promot you to update 
- 
-
+you will want to download an ISO potentalliy i use https://parrotsec.org/download/ -> Live - > security - AMD 64-> this will give you an ISO file,
+run the VM with a bridged network mode, 8 gb of ram and at least 4 core.
+open the file in the VMWareare by create new VM and select the ISO, make sure to give yourself about 8GB or ram if posible and a few cores.
+after you try install debian and from there install the .de file for vscode from the web
+It will promot you to update
 
 **Python Version:**  
 Use Python **3.12.3** (do not use newer versions; Flask compatibility issues).
@@ -50,13 +48,14 @@ Use Python **3.12.3** (do not use newer versions; Flask compatibility issues).
 #### Install Python
 
 **Linux:**
+
 ```bash
 sudo apt update
 sudo apt install python3 python3-pip python3-venv -y
 ```
 
-
 **With pyenv (Linux/macOS):**
+
 ```bash
 pyenv install 3.12.3
 pyenv global 3.12.3
@@ -69,7 +68,9 @@ cd server
 python3 -m venv env_socket
 source env_socket/bin/activate
 ```
-*On Windows:*
+
+_On Windows:_
+
 ```
 env_socket\Scripts\activate
 ```
@@ -92,14 +93,17 @@ gunicorn -k geventwebsocket.gunicorn.workers.GeventWebSocketWorker -w 1 app_sock
 ```bash
 curl http://localhost:5000/members
 ```
+
 Expected response:
+
 ```json
-{"members":["Member1","Member2","Member3"]}
+{ "members": ["Member1", "Member2", "Member3"] }
 ```
 
 ---
 
 #### enable firewall
+
 ```bash
 
 sudo ufw allow 5000/tcp
@@ -107,7 +111,6 @@ sudo ufw enable
 
 
 ```
-
 
 ### check connection from frontend, ip address is an exampl,e
 
@@ -120,7 +123,8 @@ curl http://192.168.149.128:5000
 ```bash
 npm install
 ```
-*(Add more client setup instructions here as needed)*
+
+_(Add more client setup instructions here as needed)_
 
 ---
 
@@ -128,7 +132,6 @@ npm install
 
 - Use [Keys to a well written README](https://tinyurl.com/yk3wubft) as a reference for improving this file.
 - Replace placeholder links and add more project-specific details as the project evolves.
-
 
 references
 https://www.youtube.com/watch?v=7LNl2JlZKHA
